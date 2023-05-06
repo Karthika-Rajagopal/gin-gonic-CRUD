@@ -7,11 +7,11 @@ import (
 	"github.com/google/uuid"
 )
 
-type Services struct {
+type Services struct {      //methods use a Repository struct to interface with a database
 	Repository *repository.Repository
 }
 
-func NewServices() *Services {
+func NewServices() *Services {     //creates a new instance of the Services struct and initializes the Repository field
 	return &Services{
 		Repository: repository.NewRepository(),
 	}
