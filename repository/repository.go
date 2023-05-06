@@ -7,7 +7,7 @@ import (
 )
 
 type Repository struct {
-	DB map[string]domain.Book
+	DB map[string]domain.Book  //DB field, which is a map that stores domain.Book values with their ID as the key
 }
 
 func NewRepository() *Repository {
@@ -23,7 +23,7 @@ func NewRepository() *Repository {
 	}
 }
 
-func (repo *Repository) GetAllBooks() ([]domain.Book, error) {
+func (repo *Repository) GetAllBooks() ([]domain.Book, error) {  //GetAllBooks function retrieves all books in the repository and returns them as a slice of domain.Book values
 	var books []domain.Book
 
 	for _, book := range repo.DB {
